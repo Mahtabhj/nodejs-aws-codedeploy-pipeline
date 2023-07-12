@@ -2,18 +2,18 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /nodejs-aws-codedeploy-pipeline
+    destination: /home/ec2-user/nodejs-aws-codedeploy-pipeline
 hooks:
 # ApplicationStop:
 # DownloadBundle:
 #  BeforeInstall:
 #    - location: scripts/before_install.sh
-#      timeout: 300
+#      timeout: 10
 #      runas: root
 # Install:
   AfterInstall:
     - location: scripts/after_install.sh
-      timeout: 300
+      timeout: 10
       runas: root
   ApplicationStart:
     - location: scripts/application_start.sh
